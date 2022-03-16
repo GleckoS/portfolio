@@ -3,11 +3,10 @@ import styled from "styled-components"
 
 export const H1 = styled.h1`
     position: relative;
-    padding-left: 50px;
     margin-bottom: 3rem;
 
     span{
-
+        position: relative;
         opacity: 0;
         transform: translateY(10px) scale(0.8);
         font-weight: 600;
@@ -32,6 +31,19 @@ export const H1 = styled.h1`
         &.space{
             width: 30px;
         }
+
+        &.capital{
+            color: var(--sub-active);
+
+            &::after{
+                content: "B";
+                position: absolute;
+                left: -5px;
+                bottom: -5px;
+                color: var(--active);
+                z-index: -1;
+            }
+        }
     }
 
     &::before{
@@ -42,7 +54,7 @@ export const H1 = styled.h1`
         top: 0;
         left: 0;
         margin-top: -30px;
-        margin-left: 30px;
+        margin-left: -20px;
         font-size: 20px;
     }
 
@@ -54,7 +66,7 @@ export const H1 = styled.h1`
         left: 0;
         bottom: 0;
         margin-bottom: -30px;
-        margin-left: 30px;
+        margin-left: -20px;
         font-size: 20px;
     }
 `

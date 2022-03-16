@@ -2,8 +2,15 @@ import styled from "styled-components"
 
 export const P = styled.p`
     position: relative;
-    padding-left: 50px;
     margin: 1.5rem 0;
+
+    &.grey{
+        letter-spacing: 4px;
+
+        span{
+            color: var(--text-grey);
+        }
+    }
 
     &::before{
         content: '<p>';
@@ -13,7 +20,7 @@ export const P = styled.p`
         top: 0;
         left: 0;
         margin-top: -30px;
-        margin-left: 30px;
+        margin-left: -20px;
         font-size: 20px;
     }
 
@@ -24,8 +31,8 @@ export const P = styled.p`
         color: var(--text-after);
         left: 0;
         bottom: 0;
-        margin-bottom: -30px;
-        margin-left: 30px;
+        margin-bottom: -40px;
+        margin-left: -20px;
         font-size: 20px;
     }
 `

@@ -1,12 +1,20 @@
 import * as React from "react"
-import Title from "../components/atoms/H1"
-import Paragraph from "../components/atoms/P"
+import Button from "../components/atoms/button"
+import Title from "../components/atoms/main-title"
+import Paragraph from "../components/atoms/paragraph"
+import TextZone from "../components/moleculas/text-zone"
+import Hero from "../components/organizms/hero"
 
 const IndexPage = () => {
   return (
     <main>
-      <Title/>
-      <Paragraph/>
+      <Hero>
+        <TextZone>
+          <Title />
+          <Paragraph className='grey'/>
+          <Button text={'some button text'} />
+        </TextZone>
+      </Hero>
     </main>
   )
 }

@@ -8,8 +8,10 @@
     --text-grey: #8d8d8d;
     --text-after: #515152;
     --text-fake: rgba(255,255,255,0.04);
+    --text-black: #000000;
 
     --active: #08fdd8;
+    --sub-active: rgb(225, 24, 101);
 }
 
 *{
@@ -18,6 +20,7 @@
     text-decoration: none;
     list-style: none;
     color: #fff;
+
 
     font-family: "Source Sans Pro", sans-serif;
 }

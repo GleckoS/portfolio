@@ -20,11 +20,18 @@ const obj = [
     }
 ]
 
-const Paragraph = () => {
+const obj1 = [
+    {
+        text: "Front End Developer / WordPress Expert",
+        type: 'text'
+    }
+]
+
+const Paragraph = ({ className }) => {
     return (
-        <styled.P>
+        <styled.P className={className}>
             {
-                parser(obj)
+                parser(obj1)
             }
         </styled.P>
     )

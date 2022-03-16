@@ -25,7 +25,7 @@ const Title = () => {
                         : <span
                             onMouseEnter={(el) => { addAnimation(el) }}
                             aria-hidden="true"
-                            className={el === ' ' ? 'space' : ''}
+                            className={el === ' ' ? 'space' : el === 'B' ? 'capital' : ''}
                         >
                             {el}
                         </span>
