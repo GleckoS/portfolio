@@ -1,9 +1,29 @@
+:root{
+    --background-light: #2b2b2b;
+    --background-main: #1d1d1d;
+    --background-dark: #181818;
+    --background-darkest: #000000;
+
+    --text-white: #ffffff;
+    --text-grey: #8d8d8d;
+    --text-after: #515152;
+    --text-fake: rgba(255,255,255,0.04);
+
+    --active: #08fdd8;
+}
+
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
+    color: #fff;
+
+    font-family: "Source Sans Pro", sans-serif;
 }
 
+html{
+    background: var(--background-main);
+}
 
     /* font-family: 'La Belle Aurore', cursive; */

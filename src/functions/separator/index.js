@@ -1,9 +1,11 @@
-export const separator = (string) => {
+export const separator = (string, type) => {
     const title = string.split("")
 
-    for (let i = 0; i < string.length; i++) {
-        if (title[i] === ' ' && title[i - 1] === ',') {
-            title[i] = 'br'
+    if (type === 'main') {
+        for (let i = 0; i < string.length; i++) {
+            if (title[i] === ' ' && title[i - 1] === ',') {
+                title[i] = 'br'
+            }
         }
     }
 

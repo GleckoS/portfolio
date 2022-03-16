@@ -1,58 +1,40 @@
 import React, { useEffect, useRef } from "react"
-import styled from "styled-components"
-import { rubberBand } from "../../../animations"
 import { separator } from "../../../functions/separator"
 import { addAnimation } from "../../../functions/addAnimation"
+import gsap from "gsap"
+import * as styled from './styled'
 
-const a = "Hi, I'm Bohdan, web developer"
+const string = "Hi, I'm Bohdan, web developer"
 
 const Title = () => {
-    const title = separator(a)
 
+    const title = separator(string, 'main')
 
     const titleRef = useRef()
-
     useEffect(() => {
-
+        const titleUtil = gsap.utils.selector(titleRef);
+        gsap.to(titleUtil('span'), { stagger: .1, opacity: 1, y: 0, scale: 1, ease: 'bounce' })
     }, [])
 
     return (
-        <H1 aria-label={a} ref={titleRef}>
+        <styled.H1 aria-label={string} ref={titleRef}>
             {title.map(el => (
                 <>
                     {el === 'br'
                         ? <br />
-                        : <span onMouseEnter={(el) => { addAnimation(el) }} aria-hidden="true">{el}</span>
+                        : <span
+                            onMouseEnter={(el) => { addAnimation(el) }}
+                            aria-hidden="true"
+                            className={el === ' ' ? 'space' : ''}
+                        >
+                            {el}
+                        </span>
                     }
                 </>
             ))}
-        </H1>
+        </styled.H1>
     )
 }
 
 export default Title
 
-
-const H1 = styled.h1`
-    position: relative;
-    span{
-
-        font-weight: 400;
-        font-size: 10.3rem;
-        line-height: 8.7rem;
-
-        display: inline-block;
-        transition: color .3s cubic-bezier(0.4, 0, 1, 1);
-        
-        :hover{
-            color: #08fdd8;
-        }
-
-        &.animated{
-            animation-name: ${rubberBand};
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            animation-iteration-count: 1;
-        }
-    }
-`
