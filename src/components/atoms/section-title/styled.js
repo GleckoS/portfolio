@@ -1,7 +1,7 @@
 import { rubberBand } from "../../../animations"
 import styled from "styled-components"
 
-export const H1 = styled.h1`
+export const H2 = styled.h2`
     position: relative;
     margin-bottom: 3rem;
 
@@ -20,30 +20,6 @@ export const H1 = styled.h1`
         :hover{
             color: #08fdd8;
         }
-
-        &.animated{
-            animation-name: ${rubberBand};
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            animation-iteration-count: 1;
-        }
-
-        &.space{
-            width: 30px;
-        }
-
-        &.capital{
-            color: var(--sub-active);
-
-            &::after{
-                content: "B";
-                position: absolute;
-                left: -5px;
-                bottom: -5px;
-                color: var(--active);
-                z-index: -1;
-            }
-        }
     }
 
     &::before{
@@ -56,7 +32,6 @@ export const H1 = styled.h1`
         margin-top: -30px;
         margin-left: -20px;
         font-size: 20px;
-        font-weight: 500;
     }
 
     &::after{
@@ -69,6 +44,5 @@ export const H1 = styled.h1`
         margin-bottom: -30px;
         margin-left: -20px;
         font-size: 20px;
-        font-weight: 500;
     }
 `

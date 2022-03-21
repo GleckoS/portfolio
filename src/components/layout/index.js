@@ -1,10 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import Logo from "../atoms/aside-logo"
+import Aside from "../moleculas/aside"
 
 const Layout = ({ children }) => {
     return (
         <AppWrapper>
-            <aside />
+            <Aside >
+                <Logo name="Bohdan" title="Web Developer" />
+            </Aside>
             {children}
         </AppWrapper>
     )
